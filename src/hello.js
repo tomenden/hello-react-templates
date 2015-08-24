@@ -1,33 +1,22 @@
 define(['react', 'lodash', './hello.rt'], function (React, _, template) {
     'use strict';
 
-    var countries = {
-        Israel: [
-            'Tel Aviv',
-            'Haifa',
-            'Raanana'
-        ],
-        'United States': [
-            'Manhattan',
-            'Boston'
-        ]
-    };
 
     return React.createClass({
         mixins: [React.addons.LinkedStateMixin],
-        getCountries: function () {
-            return _.keys(countries);
-        },
-        getCities: function () {
-            var selectedCountry = this.state.selectedCountry;
-            return selectedCountry ?
-                countries[selectedCountry] :
-                '';
-        },
         getInitialState: function () {
             return {
-                selectedCountry: null,
-                selectedCity: null
+                height: 50,
+                padding: 50
+            };
+        },
+        getProps: function () {
+            return {
+                style: {
+                    backgroundColor: 'pink',
+                    height: this.state.height + 'px',
+                    padding: this.state.padding + 'px 0'
+                }
             };
         },
         displayName: 'Hello',

@@ -1,12 +1,7 @@
-<div>
-    <select name="Countries" id="countries" valueLink="{this.linkState('selectedCountry')}">
-        <option selected></option>
-        <option rt-repeat="country in this.getCountries()" value="{country}">{country}</option>
-    </select>
-    <select name="Cities" id="cities" valueLink="{this.linkState('selectedCity')}">
-        <option selected></option>
-        <option rt-repeat="city in this.getCities()" value="{city}">{city}</option>
-    </select>
-    <button disabled="{!this.state.selectedCountry || !this.state.selectedCity}">Submit</button>
-</div>
+<div rt-props="this.getProps()">
+    <label for="height">Height: </label>
+    <input type="range" min="0" max="500" step="1" valueLink="{this.linkState('height')}" id="height"/>
 
+    <label for="padding">Vertical Padding: </label>
+    <input type="range" min="0" max="500" step="1" valueLink="{this.linkState('padding')}" id="padding"/>
+</div>
