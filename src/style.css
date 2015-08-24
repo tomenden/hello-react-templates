@@ -1,0 +1,28 @@
+.large {
+    font-size: 20px;
+}
+
+.huge {
+    font-size: 50px;
+}
+
+.small {
+    font-size: 12px;
+}
+
+.x-small {
+    font-size: 6px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#right-arrow,
+#left-arrow {
+    cursor: pointer;
+}

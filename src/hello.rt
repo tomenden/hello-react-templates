@@ -1,7 +1,5 @@
-<div rt-props="this.getProps()">
-    <label for="height">Height: </label>
-    <input type="range" min="0" max="500" step="1" valueLink="{this.linkState('height')}" id="height"/>
-
-    <label for="padding">Vertical Padding: </label>
-    <input type="range" min="0" max="500" step="1" valueLink="{this.linkState('padding')}" id="padding"/>
+<div>
+    <span id="left-arrow" onClick="{this.lowerClass}">&#8592;</span>
+    <span ref="text">I am a text</span>
+    <span id="right-arrow" onClick="{this.higherClass}">&#8594;</span>
 </div>
