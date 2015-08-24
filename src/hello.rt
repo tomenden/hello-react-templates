@@ -1,12 +1,12 @@
 <div>
-    <label for="newField">New Field:</label>
-    <input type="text" id="newField" valueLink="{this.linkState('newField')}"/>
-    <button onClick="{this.addField}">Add</button>
-    <form>
-        <div rt-repeat="field in this.state.fields">
-            <label for="{field}">{field}: </label>
-            <input type="text" id="{field}" onChange="{this.logChange}"/>
-        </div>
-    </form>
+    <select name="Countries" id="countries" valueLink="{this.linkState('selectedCountry')}">
+        <option selected></option>
+        <option rt-repeat="country in this.getCountries()" value="{country}">{country}</option>
+    </select>
+    <select name="Cities" id="cities" valueLink="{this.linkState('selectedCity')}">
+        <option selected></option>
+        <option rt-repeat="city in this.getCities()" value="{city}">{city}</option>
+    </select>
+    <button disabled="{!this.state.selectedCountry || !this.state.selectedCity}">Submit</button>
 </div>
 
